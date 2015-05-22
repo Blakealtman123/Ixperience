@@ -7,7 +7,4 @@ class Item
   # Accessor methods
   attr_accessor :name 
   attr_accessor :price
-
-end 
-
-
+end
