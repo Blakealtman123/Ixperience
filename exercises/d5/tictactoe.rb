@@ -19,6 +19,15 @@ def player_has_won(arr)
 	end
 end
 
+def visual(arr)
+	puts " #{arr[0]} | #{arr[1]} | #{arr[2]}"
+    puts "———+———+———"
+    puts " #{arr[3]} | #{arr[4]} | #{arr[5]}" 
+    puts "———+———+———"
+    puts " #{arr[6]} |  #{arr[7]} | #{arr[8]}"
+end
+
+
 
 i = 0
 arr = Array.new(9)
@@ -31,6 +40,7 @@ while i < 9 #add condition later
 			if arr[val.to_i] == nil
 				arr[val.to_i] = 'X'
 				i += 1
+				visual(arr)
 			else
 				puts "Invalid input"
 			end
@@ -45,6 +55,7 @@ while i < 9 #add condition later
 			if arr[val.to_i] == nil
 				arr[val.to_i] = 'O'
 				i += 1
+				visual(arr)
 			else
 				puts "Invalid input"
 			end
