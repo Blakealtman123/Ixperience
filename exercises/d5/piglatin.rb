@@ -22,7 +22,15 @@ def piglatinify(string)
 	string
 end
 
+def sentence(string)
+	arr = string.split(" ")
+	arr = arr.map do |x|
+		piglatinify(x)
+	end
+	final = arr.join(" ")
+	final
+end
 	
 puts "What word do you want?"
 string1 = gets.strip
-puts piglatinify(string1)
+puts sentence(string1)
