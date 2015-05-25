@@ -6,7 +6,7 @@
 #8
 
 #Q3
-def silly_chick(number)
+def silly_check(number)
 	if number < 5
 		puts "The number is less than 5"
 	else
@@ -14,15 +14,24 @@ def silly_chick(number)
 	end
 end
 
+silly_check(6)
+
 #Q4
 def funify(arr)
 	arr.push('fun')
 end
 
+puts funify([1,'4','blake'])
+
 #Q5
 def more_fun(arr)
 	arr[0] = 'FUN FUN'
+	arr
 end
+
+arr = [1,'4','blake']
+puts more_fun(arr)
+
 
 #Q6
 class Dog
