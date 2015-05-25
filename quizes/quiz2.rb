@@ -77,3 +77,9 @@ class Person
 		@age = age
 	end
 end
+
+#check these are correct
+me = Person.new(20)
+puts me.age
+me.age = 25
+puts me.age
