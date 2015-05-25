@@ -1,13 +1,28 @@
 def piglatinify(string)
-	temp = string[0]
-	string.slice!(0)
-	string.insert(-1,temp)
-	string.insert(-1,'ay')
-	string.downcase
-	string[0].upcase
+	count = 0
+	down_version = string.downcase
+
+	while count < string.length
+		if down_version[count] == "a" || down_version[count] ==  "e" ||  down_version[count] == "i" || down_version[count] == "o" || down_version[count] == "u"
+			if count == 0
+				pig = "#{string}way"
+				return pig
+			else 
+				pig = down_version[(count),(string.length-1)] + down_version[0,count] + 'ay'
+				if string[0] == string[0].upcase
+					pig[0] = pig[0].upcase
+				end
+				puts pig[0]
+				return pig
+			end
+		else
+			count += 1
+		end 
+	end
 	string
 end
 
+	
 puts "What word do you want?"
 string1 = gets.strip
 puts piglatinify(string1)
